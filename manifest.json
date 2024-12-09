@@ -1,0 +1,42 @@
+{
+    "manifest_version": 3,
+    "name": "JobScraperExtension",
+    "description": "API Call Extension to send content of current URL to WebScraper Backend",
+    "version": "1.0",
+    "icons": {
+        "16": "/src/assets/images/icon-16.png",
+        "32": "/src/assets/images/icon-32.png",
+        "48": "/src/assets/images/icon-48.png",
+        "128": "/src/assets/images/icon-128.png"
+    },
+    "content_scripts": [
+        {
+            "js": ["/src/assets/scripts/webScraper.js", "/src/platforms/get-in-it.js"],
+            "css": ["/src/assets/css/extension.css"],
+            "matches": ["https://www.get-in-it.de/jobsuche/p*"]
+        },
+        {
+            "js": ["/src/assets/scripts/utils.js", "/src/assets/scripts/webScraper.js", "/src/platforms/indeed.js"],
+            "css": ["/src/assets/css/extension.css"],
+            "matches": ["https://de.indeed.com/viewjob*", "https://de.indeed.com/cmp/*"]
+        }
+    ],
+    "web_accessible_resources": [
+    {
+      "resources": ["images/*"],
+      "matches": ["<all_urls>"]
+    }
+    ],
+    "background": {
+        "service_worker": "/src/assets/scripts/background.js"
+    },
+    "commands": {
+        "reloadExtension": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+Y",
+                "mac": "Command+Shift+Y"
+            },
+            "description": "Reload current tab and refresh Extension."
+        }
+    }
+}

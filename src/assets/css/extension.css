@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.js-extension__container {
+    position: fixed;
+    z-index: 1000;
+    font-family: "Roboto", sans-serif;
+    font-size: medium;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    background-color: transparent;
+}
+
+.js-extension__container.bottom {
+    bottom: 20px;
+    right: 20px;
+}
+
+.js-extension__container.middle {
+    top: 50%;
+    right: 20px;
+    transform: translate(-50%, -50%);
+}
+
+.js-extension__icon {
+    background-color: #212529;
+    background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><svg version="1.1" id="Ebene_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 800 800" style="enable-background:new 0 0 800 800;" xml:space="preserve"><style type="text/css">.st0{fill:%2341C0EB;}.st1{fill:%231D91CE;}.st2{fill:%2311518E;}.st3{fill:%231D93D3;}</style><g><path class="st0" d="M406.4,429c40.8-131.1,128.6-174,248-157l19.1,44C549.3,276.5,461.2,316.2,406.4,429z"/><path class="st1" d="M407.2,485.6c26.7-75.4,95.4-204.1,307.2-125.6l19.1,44C590.3,322.3,452.9,378.8,407.2,485.6z"/><path class="st2" d="M741,443.9l21,31.5C583.6,409,425.3,436,423.9,531.5h-57.3C358.5,424.8,183,415.8,38,475.3l15.3-31.5c120.2-43.8,299.5-43.8,322.8,65.2h38.2C446.3,391.1,650.4,404.6,741,443.9z"/><path class="st0" d="M385.8,429c-40.8-131.1-128.6-174-248-157l-19.1,44C242.9,276.5,331,316.2,385.8,429z"/><path class="st3" d="M385,485.6c-26.7-75.4-95.4-204.1-307.2-125.6l-19.1,44C201.9,322.3,339.2,378.8,385,485.6z"/></g></svg>');
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-size:calc(100% - 5px);
+    height: 40px;
+    width: 40px;
+    padding: 20px;
+    margin: 0;
+    border-radius: 50%;
+    border: 2px solid #2b3035
+}
+
+.js-extension__content_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    bottom: 45px;
+    right: 0;
+    z-index: 1001;
+    margin: 0.5rem 0;
+}
+
+.js-extension__content_container.hidden {
+    display: none;
+}
+
+.js-extension__wrapper {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: max-content;
+    justify-content: end;
+    margin: 0;
+    padding: 1rem 1.5rem;
+    background-color: #212529;
+    border-radius: 0.5rem;
+    border: 2px solid #333334;
+    gap: 1em;
+}
+
+.js-extension__wrapper button {
+    color: white;
+    background-color: #712cf9;
+    border: 1px solid #6528e0;
+    font-family: "Roboto", sans-serif;
+    font-size: medium;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.js-extension__wrapper button:hover {
+    background-color: #6528e0;
+    border: 1px solid #6528e0;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+@keyframes enter {
+    0% {
+        opacity: 0; /* Unsichtbar zu Beginn */
+        transform: scale(0.95); /* Leicht verkleinert */
+    }
+    100% {
+        opacity: 1; /* Voll sichtbar */
+        transform: scale(1); /* Originalgröße */
+    }
+}
+
+.animation {
+    animation-name: enter;
+    animation-duration: .15s;
+    --tw-enter-opacity: 0;
+    --tw-enter-scale: .95;
+    --tw-enter-rotate: initial;
+    --tw-enter-translate-x: initial;
+    --tw-enter-translate-y: initial;
+    animation-timing-function: cubic-bezier(.4,0,.2,1);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.js-extension__message_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    z-index: 1002;
+}
+
+
+.js-extension__message {
+    text-align: center;
+    font-family: inherit;
+    font-family: "Roboto", sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    width: auto;
+    color: white;
+    padding: 1rem;
+    border-radius: .5rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.info, .debug {
+    background-color: rgb(13, 110, 253);
+}
+
+.success {
+    background-color: rgb(25, 135, 84);
+}
+
+.warning {
+    background-color: rgb(253, 126, 20);
+}
+
+.error {
+    background-color: rgb(220, 53, 69);
+}
