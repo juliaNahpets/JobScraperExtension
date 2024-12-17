@@ -16,12 +16,6 @@
     right: 20px;
 }
 
-.js-extension__container.middle {
-    top: 50%;
-    right: 20px;
-    transform: translate(-50%, -50%);
-}
-
 .js-extension__icon {
     background-color: #212529;
     background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><svg version="1.1" id="Ebene_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 800 800" style="enable-background:new 0 0 800 800;" xml:space="preserve"><style type="text/css">.st0{fill:%2341C0EB;}.st1{fill:%231D91CE;}.st2{fill:%2311518E;}.st3{fill:%231D93D3;}</style><g><path class="st0" d="M406.4,429c40.8-131.1,128.6-174,248-157l19.1,44C549.3,276.5,461.2,316.2,406.4,429z"/><path class="st1" d="M407.2,485.6c26.7-75.4,95.4-204.1,307.2-125.6l19.1,44C590.3,322.3,452.9,378.8,407.2,485.6z"/><path class="st2" d="M741,443.9l21,31.5C583.6,409,425.3,436,423.9,531.5h-57.3C358.5,424.8,183,415.8,38,475.3l15.3-31.5c120.2-43.8,299.5-43.8,322.8,65.2h38.2C446.3,391.1,650.4,404.6,741,443.9z"/><path class="st0" d="M385.8,429c-40.8-131.1-128.6-174-248-157l-19.1,44C242.9,276.5,331,316.2,385.8,429z"/><path class="st3" d="M385,485.6c-26.7-75.4-95.4-204.1-307.2-125.6l-19.1,44C201.9,322.3,339.2,378.8,385,485.6z"/></g></svg>');

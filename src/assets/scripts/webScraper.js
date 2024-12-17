@@ -21,6 +21,7 @@ async function webScraper(scraper) {
         }
 
         const json = await response.json();
+        console.log(json);
         json.messages.forEach((msg, index) => {
             setTimeout(() => {
             const { message, status } = getMessageAndStatus(msg);
